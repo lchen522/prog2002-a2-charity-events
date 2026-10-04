@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details | HeartsUnited Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ Navigation (present on every page) ============ -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">
+                <span class="brand-heart">&#10084;</span> HeartsUnited
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search Events</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <!-- Back link -->
+            <a class="back-link" href="index.html">&larr; Back to all events</a>
+
+            <!-- The whole detail view is rendered here by js/event.js -->
+            <div id="event-detail">
+                <div class="loading card">Loading event details&hellip;</div>
+            </div>
+
+            <!-- Error message area (basic DOM manipulation) -->
+            <div id="error-message" class="alert alert-error hidden"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&#10084; HeartsUnited Foundation &mdash; Fundraising for education, health and the environment.</p>
+            <p class="footer-small">&copy; <span id="year"></span> HeartsUnited Foundation. PROG2002 A2 project.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/event.js"></script>
+</body>
+</html>

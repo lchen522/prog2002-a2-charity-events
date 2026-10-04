@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartsUnited Foundation | Charity Events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ Navigation (present on every page) ============ -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">
+                <span class="brand-heart">&#10084;</span> HeartsUnited
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="search.html">Search Events</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ Hero: static organisation information ============ -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-kicker">Welcome to HeartsUnited Foundation</p>
+            <h1>Connecting Kindness With Community Needs</h1>
+            <p class="hero-mission">
+                We organise fundraising events across Australia that support education, health
+                and environmental projects. Every ticket you purchase is a donation that
+                changes lives.
+            </p>
+            <div class="hero-contact">
+                <span>&#9993; hello@heartsunited.org.au</span>
+                <span>&#9742; (07) 5555 0100</span>
+                <span>&#9873; 12 Hope Street, Gold Coast QLD 4215</span>
+            </div>
+            <a class="btn btn-primary" href="#upcoming">View Our Events</a>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- ============ Upcoming events (loaded from the API) ============ -->
+        <section id="upcoming" class="section">
+            <div class="section-head">
+                <h2>Upcoming &amp; Current Events</h2>
+                <p>Join an event and make a difference. Click any event for full details and registration.</p>
+            </div>
+            <div id="upcoming-events" class="event-grid">
+                <!-- Cards are rendered here dynamically by js/home.js -->
+            </div>
+        </section>
+
+        <!-- ============ Past events (marked by date, loaded from API) ============ -->
+        <section id="past" class="section">
+            <div class="section-head">
+                <h2>Recently Completed</h2>
+                <p>Thank you for your amazing support at these past events.</p>
+            </div>
+            <div id="past-events" class="event-grid past-grid">
+                <!-- Cards are rendered here dynamically by js/home.js -->
+            </div>
+        </section>
+
+        <!-- Error message area (basic DOM manipulation) -->
+        <div id="error-message" class="alert alert-error hidden"></div>
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&#10084; HeartsUnited Foundation &mdash; Fundraising for education, health and the environment.</p>
+            <p class="footer-small">ABN 12 345 678 901 &nbsp;|&nbsp; hello@heartsunited.org.au &nbsp;|&nbsp; (07) 5555 0100</p>
+            <p class="footer-small">&copy; <span id="year"></span> HeartsUnited Foundation. PROG2002 A2 project.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

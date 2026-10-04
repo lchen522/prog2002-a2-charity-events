@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Events | HeartsUnited Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ Navigation (present on every page) ============ -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">
+                <span class="brand-heart">&#10084;</span> HeartsUnited
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="search.html" class="active">Search Events</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <div class="section-head">
+                <h1 class="page-title">Search Charity Events</h1>
+                <p>Find events by date, location and category. You can use one or more filters at once.</p>
+            </div>
+
+            <!-- ============ Search form ============ -->
+            <form id="search-form" class="search-form card">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="date">Event date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-field">
+                        <label for="location">Location (city / suburb)</label>
+                        <input type="text" id="location" name="location"
+                               placeholder="e.g. Gold Coast" maxlength="100">
+                    </div>
+                    <div class="form-field">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="">All categories</option>
+                            <!-- Options are loaded from the API by js/search.js -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="button" id="clear-filters" class="btn btn-ghost">Clear Filters</button>
+                </div>
+            </form>
+
+            <!-- Error / status message area (basic DOM manipulation) -->
+            <div id="error-message" class="alert alert-error hidden"></div>
+
+            <!-- ============ Search results ============ -->
+            <div id="results-head" class="results-head hidden">
+                <h2>Search Results (<span id="result-count">0</span>)</h2>
+            </div>
+            <div id="search-results" class="event-grid">
+                <!-- Result cards rendered here dynamically by js/search.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&#10084; HeartsUnited Foundation &mdash; Fundraising for education, health and the environment.</p>
+            <p class="footer-small">&copy; <span id="year"></span> HeartsUnited Foundation. PROG2002 A2 project.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
